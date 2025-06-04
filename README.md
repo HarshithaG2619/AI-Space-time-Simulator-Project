@@ -1,4 +1,4 @@
-{{ ... }}
+
 ## How to Run
 
 1.  Ensure you have a modern web browser that supports WebGL (e.g., Chrome, Firefox, Edge, Safari).
@@ -11,7 +11,3 @@
 +       3.  If you have Python 3, run: `python -m http.server`
 +       4.  If you have Python 2, run: `python -m SimpleHTTPServer`
 +       5.  Open your browser and go to `http://localhost:8000` (or the port specified by the server).
-
-## Features
-
-{{ ... }}
