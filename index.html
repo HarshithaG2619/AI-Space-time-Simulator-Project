@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space-Time Fabric Simulator</title>
+    <link rel="icon" href="data:,"> 
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #000; color: #fff; font-family: Arial, sans-serif; }
+        #scene-container {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+        #controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 100;
+            background-color: rgba(0,0,0,0.5); /* Slight background for better readability */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px; /* Add some margin between buttons */
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #instructions {
+            margin-top: 15px;
+            font-size: 12px; /* Will be increased below */
+            color: #ccc;
+        }
+        #instructions p {
+            margin: 5px 0;
+            font-size: 14px; /* Increased font size for instruction paragraphs */
+        }
+        #info-panel {
+            position: absolute;
+            top: 180px; /* Adjust as needed, below instructions */
+            left: 10px;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.6);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px; /* Increased base font size for info panel */
+            width: 220px; /* Increased width to accommodate image better */
+        }
+    </style>
+</head>
+<body>
+    <div id="scene-container"></div>
+    <div id="controls">
+        <button id="addPlanetButton">Add Planet</button>
+        <button id="addBlackHoleButton">Add Black Hole</button>
+        <div id="instructions">
+            <p>Click buttons to add objects.</p>
+            <p>Click and drag objects to move them.</p>
+            <p>Use mouse to orbit, pan (right-click/middle-click), and zoom.</p>
+        </div>
+        <div id="info-panel">
+            <h4>About the Simulator:</h4>
+            <p>This simulation shows how massive objects warp space-time, like a bowling ball on a trampoline. This 'dip' is gravity!</p>
+            <p>Add planets or black holes to see them deform the fabric.</p>
+            <p><strong>Black Holes:</strong> These are like super, super heavy bowling balls. They make really deep dips!</p>
+        </div>
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- OrbitControls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <!-- Your custom script -->
+    <script src="main.js"></script>
+</body>
+</html>
